@@ -1,0 +1,13 @@
+A project can be a gradle project if it has build.gradle file.
+
+gradlew & gradlew.bat are two files that are std and shipped so that it will install the gradle that will make
+the gradle distribution homogenous all around. Along with this we need to have gradle folder that has gradle-wrapper.jar and gradle-wrapper-properties
+
+These gradlew properties can be updated using command line. These define what version of gradle to be used and all.
+If we dont want to update gradlew using command line then we can put this in build.gradle
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+}
+and run gradlew so that it updates the gradle-wrapper.properties file. Then you can remove this task.
+
+To setup your gradle using gradle wrapper run ./gradlew build 
