@@ -10,4 +10,17 @@ task wrapper(type: Wrapper) {
 }
 and run gradlew so that it updates the gradle-wrapper.properties file. Then you can remove this task.
 
-To setup your gradle using gradle wrapper run ./gradlew build 
+To setup your gradle using gradle wrapper run ./gradlew build
+
+
+
+GRADLE:
+
+- Gradle builds the things in two phases
+    - Configuration phase : where it configures all the tasks custom and defined, and builds the DAG
+    - Execution phase : it executes the DAG that it has built.
+
+- Gradle by default, has few classes that are already running.. Project, Gradle, Task etc. When we run the gradle we are building these
+and configuring these along the build.
+
+-
